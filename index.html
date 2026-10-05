@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffc1">
+  <title>Vui học GDQP&amp;AN</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="topbar">
+    <a class="brand" href="#" data-action="home" aria-label="Trang chủ">
+      <img class="brand-logo" src="assets/logo.webp" alt="Logo" onerror="this.src='assets/logo.png'">
+      <span class="brand-divider"></span>
+      <span class="brand-text">
+        <span>TRUNG TÂM GIÁO DỤC</span>
+        <span>QUỐC PHÒNG VÀ AN NINH</span>
+      </span>
+    </a>
+    <h1 class="topbar-title" id="topbarTitle">Vui học GDQP&amp;AN</h1>
+    <div class="topbar-actions">
+      <button class="icon-btn" id="musicBtn" title="Bật/tắt nhạc (M)" aria-label="Bật/tắt nhạc">
+        <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      </button>
+      <button class="icon-btn back-btn" id="backBtn" title="Quay lại (Esc)" aria-label="Quay lại">
+        <svg viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Ảnh nền trang chủ nằm ngoài vùng cuộn (iOS không cuộn được khi chạm vào phần tử fixed bên trong vùng cuộn) -->
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <!-- ========== HOME ========== -->
+    <section class="screen" id="screen-home">
+      <div class="hero">
+        <div class="hero-badge">🎖️ Giáo dục Quốc phòng &amp; An ninh</div>
+        <h2 class="hero-title">Vui học <span>GDQP&amp;AN</span></h2>
+        <p class="hero-sub">Ôn tập theo từng bài học, luyện thi thử có tính giờ — học mà chơi, chơi mà học!</p>
+        <div class="module-cards" id="moduleCards"></div>
+      </div>
+    </section>
+
+    <!-- ========== MODULE (danh sách bài) ========== -->
+    <section class="screen" id="screen-module">
+      <div class="campus">
+        <img src="assets/campus.jpg" alt="Sân trường">
+        <div class="campus-caption">
+          <h2 id="moduleName">Học Phần 1</h2>
+          <p id="moduleStats"></p>
+        </div>
+      </div>
+      <div class="lesson-grid" id="lessonGrid"></div>
+    </section>
+
+    <!-- ========== QUIZ ========== -->
+    <section class="screen" id="screen-quiz">
+      <div class="quiz-progress"><div class="quiz-progress-bar" id="progressBar"></div></div>
+      <div class="quiz-layout">
+        <nav class="q-list" id="qList" aria-label="Danh sách câu hỏi"></nav>
+        <div class="q-main">
+          <div class="q-head">
+            <span class="q-chip" id="qMode">Luyện tập</span>
+            <span class="q-counter" id="qCounter">1 / 10</span>
+          </div>
+          <h3 class="q-text" id="qText"></h3>
+          <div class="options" id="options"></div>
+          <div class="q-footer">
+            <div class="volume">
+              <button class="vol-btn" id="volBtn" aria-label="Tắt/bật âm thanh">
+                <svg viewBox="0 0 24 24"><path class="spk" d="M11 5 6 9H2v6h4l5 4V5z"/><path class="w1" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="w2" d="M19 5a10 10 0 0 1 0 14"/></svg>
+              </button>
+              <input type="range" id="volume" min="0" max="100" value="50" aria-label="Âm lượng">
+            </div>
+            <div class="nav-arrows">
+              <button class="arrow-btn" id="prevBtn" aria-label="Câu trước">
+                <svg viewBox="0 0 64 40"><path d="M24 4 4 20l20 16V27h36V13H24z"/></svg>
+              </button>
+              <button class="arrow-btn" id="nextBtn" aria-label="Câu sau">
+                <svg viewBox="0 0 64 40"><path d="M40 4l20 16-20 16V27H4V13h36z"/></svg>
+              </button>
+            </div>
+            <div class="q-actions">
+              <button class="answer-btn" id="revealBtn">Đáp Án</button>
+              <button class="answer-btn submit" id="submitBtn">Nộp bài</button>
+              <div class="score-box" id="scoreBox" title="Điểm">
+                <span class="score-label">Điểm</span>
+                <span class="score-num" id="scoreNum">0</span>
+              </div>
+              <div class="timer-box" id="timerBox">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>
+                <span id="timerText">30:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HẾT GIỜ ========== -->
+    <section class="screen" id="screen-timeout">
+      <div class="bell-wrap">
+        <div class="bell-rings"><span></span><span></span><span></span></div>
+        <img class="bell" src="assets/bell.png" alt="Chuông hết giờ">
+      </div>
+      <p class="timeout-text">Hết giờ làm bài!</p>
+    </section>
+
+    <!-- ========== KẾT QUẢ ========== -->
+    <section class="screen" id="screen-result">
+      <div class="result-card">
+        <div class="result-stars" id="resultStars"></div>
+        <h2 class="result-title" id="resultTitle">Hoàn thành!</h2>
+        <div class="score-ring">
+          <svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="52"/><circle class="ring-fg" id="ringFg" cx="60" cy="60" r="52"/></svg>
+          <div class="ring-value"><strong id="resultScore">0</strong><small>/ 10 điểm</small></div>
+        </div>
+        <div class="result-stats">
+          <div><strong id="statCorrect">0</strong><span>Đúng</span></div>
+          <div><strong id="statWrong">0</strong><span>Sai</span></div>
+          <div><strong id="statSkip">0</strong><span>Bỏ trống</span></div>
+          <div><strong id="statTime">–</strong><span>Thời gian</span></div>
+        </div>
+        <p class="result-msg" id="resultMsg"></p>
+        <div class="result-actions">
+          <button class="btn ghost" id="reviewBtn">Xem lại bài</button>
+          <button class="btn" id="retryBtn">Làm lại</button>
+          <button class="btn gold" id="toModuleBtn">Danh sách bài</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== MODAL ========== -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h3 id="modalTitle"></h3>
+      <div id="modalBody"></div>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </div>
+
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="toast" id="toast"></div>
+
+  <audio id="bgMusic" src="audio/background.m4a" loop preload="auto"></audio>
+  <audio id="examMusic" src="audio/finaltest.m4a" loop preload="auto"></audio>
+
+  <script src="data/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
