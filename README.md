@@ -1,4 +1,17 @@
-# Vui học GDQP&AN
+<p align="center">
+  <img src="src-tauri/icons/128x128@2x.png" alt="Vui học GDQP&AN" width="128">
+</p>
+
+<h1 align="center">Vui học GDQP&AN</h1>
+
+<p align="center">
+  Ôn tập theo từng bài học, luyện thi thử có tính giờ cho học phần Giáo dục Quốc phòng & An ninh.<br>
+  Chạy trên trình duyệt hoặc app desktop macOS / Windows.
+</p>
+
+<p align="center">
+  <img src="docs/screenshot.jpg" alt="Giao diện app Vui học GDQP&AN" width="900">
+</p>
 
 Trang web ôn tập và thi thử cho sinh viên. Không cần server: mở `web/index.html` bằng trình duyệt là chạy.
 
