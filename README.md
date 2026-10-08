@@ -27,6 +27,26 @@
   </tr>
 </table>
 
+## ⬇️ Tải app
+
+<p align="center">
+  <a href="https://github.com/AnhLeAit/vui-hoc-gdqp-an/releases/latest"><img src="https://img.shields.io/badge/macOS-T%E1%BA%A3i%20v%E1%BB%81%20(.dmg)-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Tải cho macOS"></a>
+  &nbsp;
+  <a href="https://github.com/AnhLeAit/vui-hoc-gdqp-an/releases/latest"><img src="https://img.shields.io/badge/Windows-T%E1%BA%A3i%20v%E1%BB%81%20(.exe)-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Tải cho Windows"></a>
+  &nbsp;
+  <a href="https://anhleait.github.io/vui-hoc-gdqp-an/"><img src="https://img.shields.io/badge/Web-D%C3%B9ng%20ngay-2E7D32?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Dùng bản web"></a>
+</p>
+
+Bấm nút ở trên để mở trang tải bản mới nhất, rồi chọn file trong mục **Assets**:
+
+| Máy | File cần tải | Cách cài |
+|---|---|---|
+| **macOS** (chip Apple M hoặc Intel, macOS 10.15+) | `…_universal.dmg` | Mở file `.dmg`, kéo app vào **Applications**. Lần đầu mở: chuột phải vào app → **Open**. |
+| **Windows** 10/11 (64-bit) | `…_x64-setup.exe` | Nhấp đúp để cài. Nếu SmartScreen cảnh báo: **More info → Run anyway**. |
+| **Windows** (cài qua MSI) | `…_x64_en-US.msi` | Dành cho máy cần cài bằng MSI, ví dụ máy trường hoặc công ty. |
+
+Không muốn cài? Dùng ngay **[bản web](https://anhleait.github.io/vui-hoc-gdqp-an/)** trên trình duyệt (cả điện thoại).
+
 Trang web ôn tập và thi thử cho sinh viên. Không cần server: mở `web/index.html` bằng trình duyệt là chạy.
 
 ## Cấu trúc
