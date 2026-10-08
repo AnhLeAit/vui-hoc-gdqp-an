@@ -61,6 +61,10 @@ jobs:
           mkdir -p fixed
           if [ "${{ matrix.platform }}" = "windows-latest" ]; then
             cp src-tauri/target/release/bundle/nsis/*-setup.exe fixed/VuiHocGDQP-AN_Windows_x64-setup.exe
+            # Bản portable: giao diện web đã nhúng trong exe, chạy không cần cài (cần WebView2, có sẵn trên Win 10/11)
+            VERSION=$(node -p "require('./src-tauri/tauri.conf.json').version")
+            cp src-tauri/target/release/vui-hoc-gdqp-an.exe fixed/VuiHocGDQP-AN_Windows_x64_portable.exe
+            cp src-tauri/target/release/vui-hoc-gdqp-an.exe "fixed/Vui.Hoc.GDQP-AN_${VERSION}_x64_portable.exe"
           else
             cp src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg fixed/VuiHocGDQP-AN_macOS_universal.dmg
           fi
@@ -80,3 +84,4 @@ jobs:
             src-tauri/target/**/release/bundle/dmg/*.dmg
             src-tauri/target/**/release/bundle/nsis/*.exe
             src-tauri/target/**/release/bundle/msi/*.msi
+            src-tauri/target/release/vui-hoc-gdqp-an.exe

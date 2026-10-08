@@ -34,6 +34,8 @@
   &nbsp;
   <a href="https://github.com/AnhLeAit/vui-hoc-gdqp-an/releases/latest/download/VuiHocGDQP-AN_Windows_x64-setup.exe"><img src="https://img.shields.io/badge/Windows-T%E1%BA%A3i%20v%E1%BB%81%20(.exe)-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Tải cho Windows"></a>
   &nbsp;
+  <a href="https://github.com/AnhLeAit/vui-hoc-gdqp-an/releases/latest/download/VuiHocGDQP-AN_Windows_x64_portable.exe"><img src="https://img.shields.io/badge/Windows-Portable%20(kh%C3%B4ng%20c%E1%BA%A7n%20c%C3%A0i)-5C6BC0?style=for-the-badge&logo=windows&logoColor=white" alt="Tải bản portable cho Windows"></a>
+  &nbsp;
   <a href="https://anhleait.github.io/vui-hoc-gdqp-an/"><img src="https://img.shields.io/badge/Web-D%C3%B9ng%20ngay-2E7D32?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Dùng bản web"></a>
 </p>
 
@@ -43,6 +45,7 @@ Bấm nút ở trên là tải ngay bản mới nhất. Các bản cũ và file 
 |---|---|---|
 | **macOS** (chip Apple M hoặc Intel, macOS 10.15+) | [`VuiHocGDQP-AN_macOS_universal.dmg`](https://github.com/AnhLeAit/vui-hoc-gdqp-an/releases/latest/download/VuiHocGDQP-AN_macOS_universal.dmg) | Mở file `.dmg`, kéo app vào **Applications**. Lần đầu mở: chuột phải vào app → **Open**. |
 | **Windows** 10/11 (64-bit) | [`VuiHocGDQP-AN_Windows_x64-setup.exe`](https://github.com/AnhLeAit/vui-hoc-gdqp-an/releases/latest/download/VuiHocGDQP-AN_Windows_x64-setup.exe) | Nhấp đúp để cài. Nếu SmartScreen cảnh báo: **More info → Run anyway**. |
+| **Windows** portable (không cần cài) | [`VuiHocGDQP-AN_Windows_x64_portable.exe`](https://github.com/AnhLeAit/vui-hoc-gdqp-an/releases/latest/download/VuiHocGDQP-AN_Windows_x64_portable.exe) | Nhấp đúp là chạy, không cần quyền admin; chép vào USB dùng được. Cần WebView2 (có sẵn trên Windows 10/11). |
 | **Windows** (cài qua MSI) | `…_x64_en-US.msi` trong [trang Releases](https://github.com/AnhLeAit/vui-hoc-gdqp-an/releases/latest) | Dành cho máy cần cài bằng MSI, ví dụ máy trường hoặc công ty. |
 
 Không muốn cài? Dùng ngay **[bản web](https://anhleait.github.io/vui-hoc-gdqp-an/)** trên trình duyệt (cả điện thoại).
@@ -144,7 +147,7 @@ File đầu ra gốc nằm trong `src-tauri/target/<target>/release/bundle/`.
 
 Workflow `.github/workflows/build-desktop.yml` build cả macOS và Windows trên máy chủ GitHub:
 
-- Đẩy tag, ví dụ `git tag v1.0.1 && git push origin v1.0.1`: build và **publish** Release kèm `.dmg`, `.exe`, `.msi`, cùng bản sao tên cố định (`VuiHocGDQP-AN_Windows_x64-setup.exe`, `VuiHocGDQP-AN_macOS_universal.dmg`) để link tải ở đầu README luôn trỏ tới bản mới nhất.
+- Đẩy tag, ví dụ `git tag v1.0.2 && git push origin v1.0.2`: build và **publish** Release kèm `.dmg`, `.exe`, `.msi`, cùng bản sao tên cố định (`VuiHocGDQP-AN_Windows_x64-setup.exe`, `VuiHocGDQP-AN_Windows_x64_portable.exe`, `VuiHocGDQP-AN_macOS_universal.dmg`) để link tải ở đầu README luôn trỏ tới bản mới nhất.
 - Trước khi đẩy tag, tăng `version` trong `src-tauri/tauri.conf.json` cho khớp với tag.
 - Hoặc vào tab **Actions → Build desktop app → Run workflow**: tải file trong mục *Artifacts* của lần chạy.
 
