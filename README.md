@@ -10,8 +10,22 @@
 </p>
 
 <p align="center">
-  <img src="docs/screenshot.jpg" alt="Giao diện app Vui học GDQP&AN" width="900">
+  <img src="docs/screenshot-home.jpg" alt="Trang chủ: chọn học phần" width="900">
+  <br><sub><b>Trang chủ</b> · chọn học phần</sub>
 </p>
+
+<table align="center">
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screenshot-lessons.jpg" alt="Danh sách bài học của học phần">
+      <br><sub><b>Học phần</b> · ôn tập theo từng bài</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screenshot-exam.jpg" alt="Thiết lập bài thi thử">
+      <br><sub><b>Thi thử</b> · chọn số câu và thời gian</sub>
+    </td>
+  </tr>
+</table>
 
 Trang web ôn tập và thi thử cho sinh viên. Không cần server: mở `web/index.html` bằng trình duyệt là chạy.
 
