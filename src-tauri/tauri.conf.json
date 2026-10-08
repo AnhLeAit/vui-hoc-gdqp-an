@@ -1,7 +1,7 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "Vui Hoc GDQP-AN",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "identifier": "vn.edu.hub.vuihocgdqp",
   "build": {
     "frontendDist": "../web"

@@ -1,6 +1,6 @@
 [package]
 name = "vui-hoc-gdqp-an"
-version = "1.0.0"
+version = "1.0.1"
 description = "Vui học GDQP&AN — ôn tập và thi thử"
 authors = ["anh.le"]
 edition = "2021"
